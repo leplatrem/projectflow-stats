@@ -6592,5 +6592,5 @@
   },
   "makefile": null,
   "readme": "=======================================================\nPyVEP: a python library for the Verified Email Protocol\n=======================================================\n\nThis is a python client library for the Verified Email Protocol, a.k.a\nMozilla's BrowserID project.  See here for details:\n\n    https://wiki.mozilla.org/Identity/Verified_Email_Protocol\n\nAnd see here for how to integrate it into your website:\n\n    https://browserid.org/\n\nTo just get something stable and working, it's currently recommended that you\nuse the browserid.org remote verifier service to check your assertions. Do\nso like this::\n\n    >>> verifier = vep.RemoteVerifier()\n    >>> data = verifier.verify(BROWSERIDASSERTION, \"http://mysite.com\")\n    >>> print data[\"email\"]\n    \"test@example.com\"\n\n\nFor improved performance, or if you just want to live on the bleeding edge,\nyou can perform verification locally like so::\n\n    >>> verifier = vep.LocalVerifier()\n    >>> data = verifier.verify(BROWSERIDASSERTION, \"http://mysite.com\")\n    >>> print data[\"email\"]\n    \"test@example.com\"\n\nAs the Verified Email Protocol gets locked down more firmly, using the local\nverifier will become the preferred method of checking VEP identity assertions.\n"
-},
+}
 ]
